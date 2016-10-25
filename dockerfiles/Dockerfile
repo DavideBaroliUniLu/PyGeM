@@ -68,8 +68,10 @@ RUN  conda info -a  && \
 RUN /bin/bash -c 'source  activate test'  
 # The default sip version has api that is not compatible with qt4.
 RUN    conda install --yes numpy scipy matplotlib pip nose vtk sip=4.18 
+RUN    pip install pip --upgrade
 RUN    conda install --yes -c https://conda.anaconda.org/dlr-sc pythonocc-core  &&\
-    pip install setuptools && \
+    pip install setuptools --upgrade && \
+    pip install cython --upgrade &&\
     pip install enum34 && \
     pip install numpy-stl && \
     pip install coveralls && \
