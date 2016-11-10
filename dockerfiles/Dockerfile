@@ -83,6 +83,7 @@ RUN cd $HOME  && \
     cd PyGeM && \
     python setup.py install
 
-USER PyGeM
+USER PyGeM 
+RUN /bin/bash -c 'source  activate test'
 
 
