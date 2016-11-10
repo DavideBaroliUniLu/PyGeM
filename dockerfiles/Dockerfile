@@ -75,6 +75,8 @@ RUN    conda install --yes -c https://conda.anaconda.org/dlr-sc pythonocc-core  
     pip install enum34 && \
     pip install numpy-stl && \
     pip install coveralls && \
+    # to use code formatter 
+    pip install pylint && \
     pip install coverage
     
 RUN cd $HOME  && \
